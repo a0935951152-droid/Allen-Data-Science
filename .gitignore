@@ -1,0 +1,13 @@
+# 環境（不入庫，依主機規矩每個專案自建 .venv）
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 產物
+figures/*.png
+*.npz
+*.pt
+*.ckpt
+.DS_Store
