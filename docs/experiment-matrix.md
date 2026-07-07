@@ -221,7 +221,11 @@
 
 - **✅ A 層 Demo MVP（25/25 全部可跑）**：每個 `experiments/pX-Y-…/` 各有一支純 numpy、零第三方依賴的 MVP，
   隔離出該論文的核心機制並印出可驗證結果（見各資料夾 README 的「① Demo MVP」）。
-- **🟡 B 層（小資料）**：各單元 README 的「② 文獻資料集：準備規劃」已列來源與前處理步驟，待下載實作。
+- **✅ B 層真實資料（11/25 已接上並實測）**：以下單元有 `*_real.py`，首次執行自動下載公開資料到 `data/`（gitignore）：
+  1-1 SILSO 黑子、1-2 Melbourne 氣溫、1-3 E.coli 基因組、1-5 ECG5000、2-2 Mauna Loa CO₂、
+  2-5 JHU COVID、3-3 & 4-1 猞猁–野兔、3-5 JPL 地球星曆、4-5 氣溫 Takens 嵌入、5-2 Gaia 恆星。
+- **🟡 B 層其餘 14 個**：資料需帳號或大檔（STEAD 地震、Movebank GPS、10x scRNA、CMU MoCap、QIITA、
+  Oxford Flowers、JHU 湍流、ERA5、Project Tycho 等），README「② 文獻資料集」已列來源與前處理步驟。
 - **⬜ C 層（規劃最大實驗）**：各單元 README 的「③ 規劃最大實驗」已寫出目標/設定/度量/判準。
 
 > 推進原則（沿用 `projects.md`）：**每個實驗先做出「一張說服自己的圖」再談優化。** A 層先跑通機制（已完成），

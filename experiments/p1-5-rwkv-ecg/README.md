@@ -14,6 +14,10 @@ python3 rwkv_mvp.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 rwkv_real.py`（ECG5000 心拍(自動下載)，首次執行自動下載到 `data/`）
+> — RWKV 時間衰減特徵最近質心分類 0.94，區分正常/異常心拍。
+
 - **資料集**：PhysioNet MIT-BIH Arrhythmia
 - **來源**：https://physionet.org/content/mitdb/
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `rwkv_mvp.py`  ① 可跑 MVP
+- `rwkv_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」

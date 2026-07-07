@@ -14,6 +14,10 @@ python3 sindy_lorenz.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 sindy_real.py`（Hudson Bay 猞猁–野兔(自動下載)，首次執行自動下載到 `data/`）
+> — SINDy 還原含 xy 交互項的 LV 定性骨架(野兔 +x−xy、猞猁 +xy−y)。
+
 - **資料集**：Hudson Bay 猞猁–野兔
 - **來源**：https://www.math.tamu.edu/~phoward/m442/lynxhare.dat
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `sindy_lorenz.py`  ① 可跑 MVP
+- `sindy_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」

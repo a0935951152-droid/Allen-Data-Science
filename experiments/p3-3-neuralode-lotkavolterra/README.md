@@ -14,6 +14,10 @@ python3 neuralode_mvp.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 neuralode_real.py`（Hudson Bay 猞猁–野兔(自動下載)，首次執行自動下載到 `data/`）
+> — Neural ODE 擬合 LV 有效參數，RMSE 4.3 千隻(真實資料非乾淨 LV)。
+
 - **資料集**：Hudson Bay 猞猁–野兔年皮毛數
 - **來源**：https://www.math.tamu.edu/~phoward/m442/lynxhare.dat (經典資料，多套件內建)
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `neuralode_mvp.py`  ① 可跑 MVP
+- `neuralode_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」

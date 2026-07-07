@@ -14,6 +14,10 @@ python3 backprop_mvp.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 backprop_real.py`（Melbourne 日最低氣溫(自動下載)，首次執行自動下載到 `data/`）
+> — 手刻反傳 held-out R²=0.54，學到南半球季節(1月熱7月冷)。
+
 - **資料集**：NOAA GHCN-Daily 單站日均溫
 - **來源**：https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `backprop_mvp.py`  ① 可跑 MVP
+- `backprop_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」

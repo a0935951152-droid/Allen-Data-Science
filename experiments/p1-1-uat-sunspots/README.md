@@ -14,6 +14,10 @@ python3 uat_mvp.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 uat_real.py`（SILSO 月均太陽黑子(自動下載)，首次執行自動下載到 `data/`）
+> — 逼近 MSE 隨寬度單調降到 3.7e-3，真實非週期黑子訊號被單隱層逼近。
+
 - **資料集**：WDC-SILSO 月均太陽黑子數
 - **來源**：https://www.sidc.be/SILSO/datafiles
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `uat_mvp.py`  ① 可跑 MVP
+- `uat_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」

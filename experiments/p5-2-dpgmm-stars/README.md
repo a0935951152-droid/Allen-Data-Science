@@ -14,6 +14,10 @@ python3 dpgmm_mvp.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 dpgmm_real.py`（Gaia DR3 昴宿天區 751 星(TAP 自動下載)，首次執行自動下載到 `data/`）
+> — DP 混合未指定群數，自動分 4 群(亮藍主序/中段主序/暗紅星/離群)。
+
 - **資料集**：Gaia 恆星測光子集
 - **來源**：https://gea.esac.esa.int/archive/
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `dpgmm_mvp.py`  ① 可跑 MVP
+- `dpgmm_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」

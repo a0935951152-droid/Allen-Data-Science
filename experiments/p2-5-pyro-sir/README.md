@@ -14,6 +14,10 @@ python3 sir_mvp.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 sir_real.py`（JHU CSSE COVID 每日確診(自動下載)，首次執行自動下載到 `data/`）
+> — 義/德/韓早期病例估 R₀ ≈ 2.2–2.6，與文獻量級相符。
+
 - **資料集**：JHU CSSE COVID-19 每日病例
 - **來源**：https://github.com/CSSEGISandData/COVID-19
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `sir_mvp.py`  ① 可跑 MVP
+- `sir_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」

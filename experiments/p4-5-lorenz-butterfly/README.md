@@ -14,6 +14,10 @@ python3 lorenz_butterfly.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 butterfly_real.py`（Melbourne 氣溫 Takens 嵌入(自動下載)，首次執行自動下載到 `data/`）
+> — 去季節殘差發散曲線第 1 步即飽和 → 真實天氣近高維隨機、非低維混沌(對照合成 Lorenz)。
+
 - **資料集**：ERA5 再分析 / 真實氣溫時序
 - **來源**：https://cds.climate.copernicus.eu/ (ERA5)
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `lorenz_butterfly.py`  ① 可跑 MVP
+- `butterfly_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」

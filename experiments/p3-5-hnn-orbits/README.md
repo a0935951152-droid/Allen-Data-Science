@@ -14,6 +14,10 @@ python3 hnn_mvp.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 hnn_real.py`（JPL Horizons 地球星曆(API 自動下載)，首次執行自動下載到 `data/`）
+> — 真實行星軌道比能量守恆到 6e-4：HNN 內建的不變量。
+
 - **資料集**：JPL Horizons 星曆
 - **來源**：https://ssd.jpl.nasa.gov/horizons/
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `hnn_mvp.py`  ① 可跑 MVP
+- `hnn_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」

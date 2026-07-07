@@ -14,6 +14,10 @@ python3 bnn_mvp.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 bnn_real.py`（Mauna Loa 月均 CO₂(自動下載)，首次執行自動下載到 `data/`）
+> — 只用 <2005 訓練，外推 σ 由 2.01→2.16 張開，±2σ 涵蓋 92%，RMSE 3.0 ppm。
+
 - **資料集**：NOAA Mauna Loa 月均 CO₂
 - **來源**：https://gml.noaa.gov/ccgg/trends/data.html
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `bnn_mvp.py`  ① 可跑 MVP
+- `bnn_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」

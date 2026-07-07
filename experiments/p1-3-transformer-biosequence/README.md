@@ -14,6 +14,10 @@ python3 transformer_mvp.py          # 純 numpy，零第三方依賴
 ```
 
 ## ② 文獻資料集：準備規劃
+
+> **✅ 已接真實資料並實測**：`python3 transformer_real.py`（E. coli 基因組 200kbp(NCBI 自動下載)，首次執行自動下載到 `data/`）
+> — 4-mer 下一鹼基預測 0.34 > 隨機 0.25，真實 DNA 有可學結構。
+
 - **資料集**：UniProt 蛋白序列子集 / NCBI E. coli 基因組
 - **來源**：https://www.uniprot.org/
 - **準備步驟**：
@@ -37,5 +41,6 @@ export CUDA_VISIBLE_DEVICES=0           # 需要 GPU 時只用 1080 Ti
 
 ## 結構
 - `transformer_mvp.py`  ① 可跑 MVP
+- `transformer_real.py`  ② 真實資料實測（可跑）
 - `data/`  資料（gitignore，用到才下載）
 - `figures/`  「說服自己的那張圖」
