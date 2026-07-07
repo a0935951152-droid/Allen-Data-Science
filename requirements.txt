@@ -1,3 +1,3 @@
-# 旗艦示範 code/lorenz_sindy_demo.py 只需要 numpy。
-# 各子專案（docs/projects.md）有各自的 requirements.txt，請在該專案的 .venv 內安裝，勿污染主機。
+# 兩支可跑 A 層示範（experiments/p4-1-sindy-lorenz、p4-5-lorenz-butterfly）只需要 numpy。
+# 各實驗（docs/experiment-matrix.md）有各自的 requirements.txt，請在該實驗的 .venv 內安裝，勿污染主機。
 numpy>=1.24

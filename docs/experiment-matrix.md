@@ -137,7 +137,7 @@
 
 ### 4-1 · SINDy（稀疏動力學辨識）
 - **自然現象**：Lorenz 對流混沌 / 生態震盪。
-- **資料集**：合成 Lorenz（已有 `code/lorenz_sindy_demo.py`）✅ + 猞猁–野兔 ✅。
+- **資料集**：合成 Lorenz（已有 `experiments/p4-1-sindy-lorenz/sindy_lorenz.py`）✅ + 猞猁–野兔 ✅。
 - **A 模擬**：**現有旗艦 demo**，純 numpy 從 Lorenz 時序還原三條 ODE。
 - **B 小資料**：猞猁–野兔資料還原 Lotka–Volterra 方程。
 - **C 完整**：噪聲 / 取樣率對還原成功率的影響曲線，並與 `pysindy` 對照。
@@ -165,7 +165,7 @@
 
 ### 4-5 · Lorenz 1963（混沌原型）
 - **自然現象**：大氣對流的敏感依賴（蝴蝶效應）。
-- **資料集**：合成（三行 ODE，`code/lorenz_butterfly_demo.py`）✅ + 可選 ERA5 再分析 ⧗。
+- **資料集**：合成（三行 ODE，`experiments/p4-5-lorenz-butterfly/lorenz_butterfly.py`）✅ + 可選 ERA5 再分析 ⧗。
 - **A 模擬**：**新增 demo**，兩條近初值軌跡指數分離，估最大 Lyapunov 指數。
 - **B 小資料**：真實氣溫時序的相空間重構（Takens 嵌入）。
 - **C 完整**：可預測時界（predictability horizon）的資料驅動估計。
@@ -219,8 +219,8 @@
 | 🟡 骨架 | 目錄與 README 已建，待實作 |
 | ⬜ 規劃 | 僅本文件的設計 |
 
-- **✅ 4-1 A**：`code/lorenz_sindy_demo.py`（SINDy 還原 Lorenz）
-- **✅ 4-5 A**：`code/lorenz_butterfly_demo.py`（蝴蝶效應 + Lyapunov）
+- **✅ 4-1 A**：`experiments/p4-1-sindy-lorenz/sindy_lorenz.py`（SINDy 還原 Lorenz）
+- **✅ 4-5 A**：`experiments/p4-5-lorenz-butterfly/lorenz_butterfly.py`（蝴蝶效應 + Benettin Lyapunov）
 - 其餘 73 個：先建目錄骨架（🟡），依 `docs/projects.md` 的建議順序推進（P1/P2 → P4 → P3/P6 → P5）。
 
 > 推進原則（沿用 `projects.md`）：**每個實驗先做出「一張說服自己的圖」再談優化。** A 層先跑通機制，B 層驗證真實資料，C 層才追標度律與嚴謹度量。
