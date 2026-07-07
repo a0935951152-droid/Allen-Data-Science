@@ -219,8 +219,10 @@
 | 🟡 骨架 | 目錄與 README 已建，待實作 |
 | ⬜ 規劃 | 僅本文件的設計 |
 
-- **✅ 4-1 A**：`experiments/p4-1-sindy-lorenz/sindy_lorenz.py`（SINDy 還原 Lorenz）
-- **✅ 4-5 A**：`experiments/p4-5-lorenz-butterfly/lorenz_butterfly.py`（蝴蝶效應 + Benettin Lyapunov）
-- 其餘 73 個：先建目錄骨架（🟡），依 `docs/projects.md` 的建議順序推進（P1/P2 → P4 → P3/P6 → P5）。
+- **✅ A 層 Demo MVP（25/25 全部可跑）**：每個 `experiments/pX-Y-…/` 各有一支純 numpy、零第三方依賴的 MVP，
+  隔離出該論文的核心機制並印出可驗證結果（見各資料夾 README 的「① Demo MVP」）。
+- **🟡 B 層（小資料）**：各單元 README 的「② 文獻資料集：準備規劃」已列來源與前處理步驟，待下載實作。
+- **⬜ C 層（規劃最大實驗）**：各單元 README 的「③ 規劃最大實驗」已寫出目標/設定/度量/判準。
 
-> 推進原則（沿用 `projects.md`）：**每個實驗先做出「一張說服自己的圖」再談優化。** A 層先跑通機制，B 層驗證真實資料，C 層才追標度律與嚴謹度量。
+> 推進原則（沿用 `projects.md`）：**每個實驗先做出「一張說服自己的圖」再談優化。** A 層先跑通機制（已完成），
+> B 層驗證真實資料，C 層才追標度律與嚴謹度量。每個資料夾 README = ①MVP+資料 ②文獻資料集準備 ③規劃最大實驗。

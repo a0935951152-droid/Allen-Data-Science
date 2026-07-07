@@ -32,21 +32,23 @@
 - [`docs/literature-review.md`](docs/literature-review.md) — 五大理論支柱 × 各 5 篇奠基論文，每篇標注「發想方式」與原始碼。
 - [`docs/projects.md`](docs/projects.md) — 6 個可推上 GitHub 的實作專案，由易到難。
 - [`docs/experiment-matrix.md`](docs/experiment-matrix.md) — **實驗矩陣**：25 個自然現象 × 3 層實驗（模擬 / 小資料 / 完整規劃）= 75 個實驗，各附公開資料集來源。
-- [`experiments/`](experiments/) — 依矩陣建好的 25 個實驗目錄，每個含 `data/`、`figures/` 與 `.venv` 守則。其中兩個 A 層**可直接跑**：
-  - [`experiments/p4-1-sindy-lorenz/sindy_lorenz.py`](experiments/p4-1-sindy-lorenz/sindy_lorenz.py) — 純 numpy 從 Lorenz 資料還原出三條微分方程（收斂 / 還原律）。
-  - [`experiments/p4-5-lorenz-butterfly/lorenz_butterfly.py`](experiments/p4-5-lorenz-butterfly/lorenz_butterfly.py) — 純 numpy 蝴蝶效應 + Benettin 法估最大 Lyapunov 指數（發散原型）。
+- [`experiments/`](experiments/) — 25 個實驗目錄，**每個都有一支純 numpy、可直接跑的 A 層 Demo MVP**，隔離出該論文的核心機制。
+  每個資料夾 README 含三段：**① Demo MVP + 使用資料、② 文獻資料集準備規劃、③ 規劃最大實驗**。
 
 ## 快速開始
 
+全部 25 支 MVP 只需要 numpy（若主機無 numpy，請先在 .venv 內安裝，勿污染主機）。任選一支：
+
 ```bash
-# 兩支示範只需要 numpy（若主機無 numpy，請先在 .venv 內安裝，勿污染主機）
-python3 experiments/p4-1-sindy-lorenz/sindy_lorenz.py         # 收斂：從混沌時序還原三條 ODE
-python3 experiments/p4-5-lorenz-butterfly/lorenz_butterfly.py # 發散：蝴蝶效應 + Lyapunov 指數
+python3 experiments/p4-1-sindy-lorenz/sindy_lorenz.py         # 發散→收斂：從混沌時序還原三條 ODE
+python3 experiments/p3-2-score-particles/score_mvp.py         # 收斂：畫出 score 向量場(發散方向)
+python3 experiments/p3-5-hnn-orbits/hnn_mvp.py                # 物理牆：辛積分守恆 vs Euler 漂移
+python3 experiments/p2-2-bbb-co2/bnn_mvp.py                   # 貝氏：OOD 方差誠實張開
+python3 experiments/p5-5-umap-scrnaseq/tsne_mvp.py            # 高維：t-SNE 攤平 3 群
 ```
 
-預期輸出：
-- `sindy_lorenz.py`：從一段混沌時間序列，稀疏回歸**還原出 Lorenz 的 dx/dt, dy/dt, dz/dt**——親眼看到「機器從資料裡挖出加減乘除的律」。
-- `lorenz_butterfly.py`：兩條初值只差 `1e-9` 的軌跡**指數分離**，Benettin 法估出最大 Lyapunov 指數 λ≈0.91 與「可預測時界」——親眼看到「發散」為何無法靠記憶硬扛。
+每支都印出可驗證的結果（還原的方程、估計的指數、方差喇叭口、群純度…），對應 `docs/literature-review.md` 的一篇論文。
+一鍵全跑：`for f in experiments/*/*_mvp.py experiments/*/sindy_lorenz.py experiments/*/lorenz_butterfly.py; do python3 "$f"; done`
 
 ## 一句話留給未來的你
 
