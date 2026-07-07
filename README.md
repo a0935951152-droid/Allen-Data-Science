@@ -31,16 +31,22 @@
 
 - [`docs/literature-review.md`](docs/literature-review.md) — 五大理論支柱 × 各 5 篇奠基論文，每篇標注「發想方式」與原始碼。
 - [`docs/projects.md`](docs/projects.md) — 6 個可推上 GitHub 的實作專案，由易到難。
-- [`code/lorenz_sindy_demo.py`](code/lorenz_sindy_demo.py) — **可直接跑**的旗艦示範：純 numpy 從 Lorenz 資料還原出三條微分方程（專案 P1 的核心）。
+- [`docs/experiment-matrix.md`](docs/experiment-matrix.md) — **實驗矩陣**：25 個自然現象 × 3 層實驗（模擬 / 小資料 / 完整規劃）= 75 個實驗，各附公開資料集來源。
+- [`experiments/`](experiments/) — 依矩陣建好的 25 個實驗目錄骨架（每個含 `data/` 與 `figures/`，環境自帶 `.venv` 守則）。
+- [`code/lorenz_sindy_demo.py`](code/lorenz_sindy_demo.py) — **可直接跑**的旗艦示範：純 numpy 從 Lorenz 資料還原出三條微分方程（收斂 / 還原律）。
+- [`code/lorenz_butterfly_demo.py`](code/lorenz_butterfly_demo.py) — **可直接跑**：純 numpy 蝴蝶效應 + 最大 Lyapunov 指數估計（發散原型）。
 
 ## 快速開始
 
 ```bash
-# 旗艦示範只需要 numpy（若主機無 numpy，請先在 .venv 內安裝，勿污染主機）
-python3 code/lorenz_sindy_demo.py
+# 兩支示範只需要 numpy（若主機無 numpy，請先在 .venv 內安裝，勿污染主機）
+python3 code/lorenz_sindy_demo.py       # 收斂：從混沌時序還原三條 ODE
+python3 code/lorenz_butterfly_demo.py   # 發散：蝴蝶效應 + Lyapunov 指數
 ```
 
-預期輸出：從一段混沌時間序列，稀疏回歸**還原出 Lorenz 系統的 dx/dt, dy/dt, dz/dt**——親眼看到「機器從資料裡挖出加減乘除的律」。
+預期輸出：
+- `lorenz_sindy_demo`：從一段混沌時間序列，稀疏回歸**還原出 Lorenz 的 dx/dt, dy/dt, dz/dt**——親眼看到「機器從資料裡挖出加減乘除的律」。
+- `lorenz_butterfly_demo`：兩條初值只差 `1e-9` 的軌跡**指數分離**，估出最大 Lyapunov 指數 λ≈0.9 與「可預測時界」——親眼看到「發散」為何無法靠記憶硬扛。
 
 ## 一句話留給未來的你
 
