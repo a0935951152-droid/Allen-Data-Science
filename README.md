@@ -2,6 +2,9 @@
 
 這個倉庫把一場「從第一性原理推導世界模型」的思辨，整理成**文獻回顧 + 可實作專案**。
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/a0935951152-droid/Allen-Data-Science/blob/main/notebooks/colab_launcher.ipynb)
+— 一鍵在 Colab 跑全部 25 個 MVP 與 11 個真實資料實驗；需 GPU 的 C 層可用 Colab 的 T4(16GB)，比本機 1080 Ti 更寬裕。
+
 ## 主軸（一句話）
 
 > **神經網路是一台沒有時間概念的靜態幾何機器；而真實世界是「在時間中發散、被邏輯收斂」的動態系統。**
